@@ -1,4 +1,6 @@
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.vividsolutions.jts.geom.Geometry;
@@ -35,21 +37,8 @@ public class Reader {
         System.out.println("SHAPE:"+SHAPE_TYPE);
 
         SimpleFeatureCollection collection = featureSource.getFeatures();
-        SimpleFeatureIterator iterator = collection.features();
-        try {
-            while( iterator.hasNext() ){
-                SimpleFeature feature = iterator.next();
-                Long is_car = (Long) feature.getAttribute("is_car");
-                Point point = (Point) feature.getDefaultGeometry();
-                System.out.println(is_car);
-//                System.out.print(point.getX());
-//                System.out.println(point.getY());
 
-            }
-        }
-        finally {
-            iterator.close();
-        }
+
 //        System.out.println(featureSource.getFeatures());
         // Create a map content and add our shapefile to it
 //        MapContent map = new MapContent();
@@ -61,5 +50,28 @@ public class Reader {
 //
 //        // Now display the map
 //        JMapFrame.showMap(map);
+    }
+
+    private double euclid_distance(double x1, double y1, double x2, double y2){
+        return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
+    }
+
+    public List<Point> get_nearby_cars(Point main_car, double radius, SimpleFeatureCollection collection){
+        List<Point> nearby_cars = new ArrayList<>();
+        try(SimpleFeatureIterator iterator = collection.features()) {
+            while( iterator.hasNext() ){
+                SimpleFeature feature = iterator.next();
+                Long is_car = (Long) feature.getAttribute("is_car");
+                Point point = (Point) feature.getDefaultGeometry();
+
+                if (is_car == 1 && point.getX() != main_car.getX() && point.getY() != main_car.getY()){
+                    double distance = euclid_distance(point.getX(), point.getY(), main_car.getX(), main_car.getY());
+
+                    if (distance <= radius)
+                        nearby_cars.add(point);
+                }
+            }
+        }
+        return nearby_cars;
     }
 }
