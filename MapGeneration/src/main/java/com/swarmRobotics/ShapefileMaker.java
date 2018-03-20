@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.swing.UIManager;
 
+import com.vividsolutions.jts.geom.*;
 import org.geotools.data.DataUtilities;
 import org.geotools.data.DefaultTransaction;
 import org.geotools.data.Transaction;
@@ -26,56 +27,34 @@ import org.geotools.swing.data.JFileDataStoreChooser;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.feature.simple.SimpleFeatureType;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.GeometryFactory;
-import com.vividsolutions.jts.geom.Point;
-
 public class ShapefileMaker {
 
-    private String filename = "data.csv";
-
-
     public void makeShapefile() throws IOException, SchemaException {
-
-       //FileInputStream fstream = new FileInputStream(filename);
-        File file = new File(filename);
-       // BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-
-        final SimpleFeatureType TYPE = DataUtilities.createType("Car",
-                "the_geom:Point:srid=4326," + // <- the geometry attribute: Point type
-                        "name:String," +   // <- a String attribute
+        /*SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
+        /*b.setName( "Maze" );
+        b.setCRS( null ); // set crs first
+        b.add( "Maze block", Polygon.class ); // then add geometry
+        final SimpleFeatureType BLOCK_TYPE = b.buildFeatureType();
+        System.out.println("TYPE:" + BLOCK_TYPE);*/
+        final SimpleFeatureType BLOCK_TYPE = DataUtilities.createType("Block",
+                "the_geom:MultiPolygon," + // <- the geometry attribute: Point type
                         "id:Integer"   // a number attribute
         );
-        System.out.println("TYPE:"+TYPE);
         List<SimpleFeature> features = new ArrayList<>();
-        GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
-        SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(TYPE);
-        try (BufferedReader reader = new BufferedReader(new FileReader(file)) ){
-            /* First line of the data file is the header */
-            String line = reader.readLine();
-            System.out.println("Header: " + line);
+        com.vividsolutions.jts.geom.GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
+        SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(BLOCK_TYPE);
+        Coordinate[] coords  =
+                new Coordinate[] {new Coordinate(4, 0), new Coordinate(2, 2),
+                        new Coordinate(4, 4), new Coordinate(6, 2), new Coordinate(4, 0) };
 
-            for (line = reader.readLine(); line != null; line = reader.readLine()) {
-                if (line.trim().length() > 0) { // skip blank lines
-                    String tokens[] = line.split("\\,");
-
-                    double latitude = Double.parseDouble(tokens[0]);
-                    double longitude = Double.parseDouble(tokens[1]);
-                    String name = tokens[2].trim();
-                    int number = Integer.parseInt(tokens[3].trim());
-
-                    /* Longitude (= x coord) first ! */
-                    Point point = geometryFactory.createPoint(new Coordinate(longitude, latitude));
-
-                    featureBuilder.add(point);
-                    featureBuilder.add(name);
-                    featureBuilder.add(number);
-                    SimpleFeature feature = featureBuilder.buildFeature(null);
-                    features.add(feature);
-                }
-            }
-
-        }catch (IOException e){}
+        LinearRing ring = geometryFactory.createLinearRing( coords );
+        LinearRing holes[] = null; // use LinearRing[] to represent holes
+        Polygon polygon = geometryFactory.createPolygon(ring, holes );
+        System.out.print(polygon);
+        featureBuilder.add(polygon);
+        featureBuilder.add(0);
+        SimpleFeature polygonFeature = featureBuilder.buildFeature(null);
+        features.add(polygonFeature);
 
         File newFile = new File("shapefile.shp");
 
@@ -90,7 +69,7 @@ public class ShapefileMaker {
         /*
          * TYPE is used as a template to describe the file contents
          */
-        newDataStore.createSchema(TYPE);
+        newDataStore.createSchema(BLOCK_TYPE);
         /*
          * Write the features to the shapefile
          */
@@ -117,7 +96,7 @@ public class ShapefileMaker {
              * SimpleFeatureCollection object, so we use the ListFeatureCollection
              * class to wrap our list of features.
              */
-            SimpleFeatureCollection collection = new ListFeatureCollection(TYPE, features);
+            SimpleFeatureCollection collection = new ListFeatureCollection(BLOCK_TYPE, features);
             featureStore.setTransaction(transaction);
             try {
                 featureStore.addFeatures(collection);
@@ -133,6 +112,6 @@ public class ShapefileMaker {
             System.out.println(typeName + " does not support read/write access");
             System.exit(1);
         }
+
     }
-    //}
 }
