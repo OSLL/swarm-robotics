@@ -27,7 +27,7 @@ public class MazeGenerator {
                 else maze[i][j].setType(WALL);           //в остальных случаях это СТЕНА.
             }
         }
-        drawMaze();
+        //drawMaze();
     }
 
     public void drawMaze(){
@@ -80,7 +80,7 @@ public class MazeGenerator {
             }
                 //drawMaze();
         }while(getUnvisitedCells().size() > 0);
-        drawMaze();
+        //drawMaze();
         return maze;
     }
 

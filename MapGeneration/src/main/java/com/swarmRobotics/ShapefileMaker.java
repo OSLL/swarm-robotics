@@ -29,33 +29,55 @@ import org.opengis.feature.simple.SimpleFeatureType;
 
 public class ShapefileMaker {
 
-    public void makeShapefile() throws IOException, SchemaException {
-        /*SimpleFeatureTypeBuilder b = new SimpleFeatureTypeBuilder();
-        /*b.setName( "Maze" );
-        b.setCRS( null ); // set crs first
-        b.add( "Maze block", Polygon.class ); // then add geometry
-        final SimpleFeatureType BLOCK_TYPE = b.buildFeatureType();
-        System.out.println("TYPE:" + BLOCK_TYPE);*/
+    private List<SimpleFeature> extractFeatures(Cell[][] maze, int width, int height, int blockSize, SimpleFeatureType BLOCK_TYPE){
+        List<SimpleFeature> features = new ArrayList<>();
+        GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
+        SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(BLOCK_TYPE);
+        for(int i = 0; i < height; i++){
+            for(int j = 0; j < width; j++){
+                if (maze[i][j].getType() != Type.WALL){
+                    int leftTopX = j*blockSize, leftTopY = i*blockSize;
+                    Coordinate[] coords  =
+                            new Coordinate[] {new Coordinate(leftTopX, leftTopY), new Coordinate(leftTopX + blockSize, leftTopY),
+                                    new Coordinate(leftTopX + blockSize, leftTopY + blockSize), new Coordinate(leftTopX, leftTopY + blockSize),
+                                    new Coordinate(leftTopX, leftTopY) };
+                    LinearRing ring = geometryFactory.createLinearRing( coords );
+                    LinearRing holes[] = null; // use LinearRing[] to represent holes
+                    Polygon polygon = geometryFactory.createPolygon(ring, holes );
+                    //System.out.println(polygon);
+                    featureBuilder.add(polygon);
+                    featureBuilder.add(0);
+                    SimpleFeature polygonFeature = featureBuilder.buildFeature(null);
+                    features.add(polygonFeature);
+                }
+
+            }
+        }
+        return features;
+    }
+    public void makeShapefile(Cell[][] maze, int width, int height) throws IOException, SchemaException {
+
         final SimpleFeatureType BLOCK_TYPE = DataUtilities.createType("Block",
                 "the_geom:MultiPolygon," + // <- the geometry attribute: Point type
                         "id:Integer"   // a number attribute
         );
-        List<SimpleFeature> features = new ArrayList<>();
-        com.vividsolutions.jts.geom.GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
-        SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(BLOCK_TYPE);
-        Coordinate[] coords  =
-                new Coordinate[] {new Coordinate(4, 0), new Coordinate(2, 2),
-                        new Coordinate(4, 4), new Coordinate(6, 2), new Coordinate(4, 0) };
+//        List<SimpleFeature> features = new ArrayList<>();
+////        GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
+////        SimpleFeatureBuilder featureBuilder = new SimpleFeatureBuilder(BLOCK_TYPE);
+////        Coordinate[] coords  =
+////                new Coordinate[] {new Coordinate(4, 0), new Coordinate(2, 2),
+////                        new Coordinate(4, 4), new Coordinate(6, 2), new Coordinate(4, 0) };
+////
+////        LinearRing ring = geometryFactory.createLinearRing( coords );
+////        LinearRing holes[] = null; // use LinearRing[] to represent holes
+////        Polygon polygon = geometryFactory.createPolygon(ring, holes );
+////        System.out.print(polygon);
+////        featureBuilder.add(polygon);
+////        featureBuilder.add(0);
+////        SimpleFeature polygonFeature = featureBuilder.buildFeature(null);
+////        features.add(polygonFeature);
 
-        LinearRing ring = geometryFactory.createLinearRing( coords );
-        LinearRing holes[] = null; // use LinearRing[] to represent holes
-        Polygon polygon = geometryFactory.createPolygon(ring, holes );
-        System.out.print(polygon);
-        featureBuilder.add(polygon);
-        featureBuilder.add(0);
-        SimpleFeature polygonFeature = featureBuilder.buildFeature(null);
-        features.add(polygonFeature);
-
+        List<SimpleFeature> features = extractFeatures(maze, width, height,10, BLOCK_TYPE);
         File newFile = new File("shapefile.shp");
 
         ShapefileDataStoreFactory dataStoreFactory = new ShapefileDataStoreFactory();
