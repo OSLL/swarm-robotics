@@ -12,10 +12,14 @@ public class Main extends JFrame{
         Container c = getContentPane();
         c.setLayout(new BoxLayout(c, BoxLayout.PAGE_AXIS)); // установка менеджера размещения
 
-        SpinnerModel model = new SpinnerNumberModel(19, //initial value
+        SpinnerModel model1 = new SpinnerNumberModel(19, //initial value
                         5, //min
                         10000, //max
                         1);
+        SpinnerModel model2 = new SpinnerNumberModel(19, //initial value
+                5, //min
+                10000, //max
+                1);
         SpinnerModel blockModel = new SpinnerNumberModel(10, //initial value
                         1, //min
                         10000, //max
@@ -26,7 +30,7 @@ public class Main extends JFrame{
         widthPanel.setLayout(new BoxLayout(widthPanel, BoxLayout.X_AXIS));
         Label widthLabel = new Label("Width: ");
         widthLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
-        JSpinner widthSpinner = new JSpinner(model);
+        JSpinner widthSpinner = new JSpinner(model1);
         widthSpinner.setMaximumSize(new Dimension(200, 35));
         widthSpinner.setFont(new Font("Dialog", Font.PLAIN, 16));
         widthPanel.add(widthLabel);
@@ -38,7 +42,7 @@ public class Main extends JFrame{
         heightPanel.setLayout(new BoxLayout(heightPanel, BoxLayout.X_AXIS));
         Label heightLabel = new Label("Height: ");
         heightLabel.setFont(new Font("Dialog", Font.PLAIN, 16));
-        JSpinner heightSpinner = new JSpinner(model);
+        JSpinner heightSpinner = new JSpinner(model2);
         heightSpinner.setMaximumSize(new Dimension(200, 35));
         heightSpinner.setFont(new Font("Dialog", Font.PLAIN, 16));
         heightPanel.add(heightLabel);
