@@ -16,9 +16,13 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="246">
+              <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4014#4015#0" expanded="true" />
+                <element signature="e#4040#4041#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,8 +30,8 @@
       <file leaf-file-name="MazeGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/MazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+            <state relative-caret-position="-2087">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,8 +42,8 @@
       <file leaf-file-name="ShapefileMaker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/ShapefileMaker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-505">
-              <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="508">
+              <caret line="118" column="9" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +82,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/Cell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/Type.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/Maze.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/ShapefileMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/MazeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/ShapefileMaker.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/swarmRobotics/Main.java" />
       </list>
     </option>
@@ -91,10 +95,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
-    <option name="y" value="74" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="x" value="1088" />
+    <option name="width" value="840" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -111,6 +114,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,10 +155,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,16 +231,16 @@
       <workItem from="1521033402086" duration="3632000" />
       <workItem from="1521044356744" duration="2668000" />
       <workItem from="1521225408301" duration="25291000" />
-      <workItem from="1521572924431" duration="5995000" />
+      <workItem from="1521572924431" duration="6193000" />
+      <workItem from="1521665595432" duration="12004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37586000" />
+    <option name="totallyTimeSpent" value="49788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -248,7 +251,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3160221" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15690608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -279,15 +282,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/MazeGenerator.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -300,7 +295,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/MazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/ShapefileMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -328,7 +359,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -353,7 +388,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -419,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/MazeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        <state relative-caret-position="-2087">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -429,8 +468,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/ShapefileMaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="508">
+          <caret line="118" column="9" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -439,9 +478,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/swarmRobotics/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="246">
+          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
