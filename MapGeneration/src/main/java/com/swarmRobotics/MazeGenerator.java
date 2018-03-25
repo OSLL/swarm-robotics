@@ -1,6 +1,6 @@
 package com.swarmRobotics;
 
-import com.sun.istack.internal.NotNull;
+
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -90,7 +90,7 @@ public class MazeGenerator {
         return unvisitedCells;
     }
 
-    private ArrayList<Cell> getUnvisitedNeighbours( @NotNull Cell cell){
+    private ArrayList<Cell> getUnvisitedNeighbours( Cell cell){
         ArrayList<Cell> unvisitedNeighbourCells = new ArrayList<>();
         int distance = 2;
         int x = cell.getX();
@@ -111,7 +111,7 @@ public class MazeGenerator {
         return unvisitedNeighbourCells;
     }
 
-    private void removeWall(@NotNull Cell firstCell, @NotNull Cell secondCell){
+    private void removeWall( Cell firstCell,  Cell secondCell){
         int xDiff = secondCell.getX() - firstCell.getX();
         int yDiff = secondCell.getY() - firstCell.getY();
         int addX = (xDiff != 0) ? (xDiff / abs(xDiff)) : 0;
