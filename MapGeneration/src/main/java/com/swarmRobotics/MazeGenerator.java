@@ -28,6 +28,24 @@ public class MazeGenerator {
         }
     }
 
+    public void addNet(Cell[][] maze, int netStep){
+        int height = maze.length;
+        int width = maze[0].length;
+        int i = 0;
+        while(i < height){
+            for (int j = 0; j < width; j ++)
+                maze[i][j].setType(UNVISITED);
+            i+=netStep;
+        }
+
+        i = 0;
+        while(i < width){
+            for (int j = 0; j < height; j ++)
+                maze[j][i].setType(UNVISITED);
+            i+=netStep;
+        }
+
+    }
     public void drawMaze(){
         for(int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
