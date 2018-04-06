@@ -1,4 +1,4 @@
-package com.swarmRobotics;
+package swarm_robotics.map;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,9 +12,9 @@ public class Main extends JFrame{
     public Main(){
         super("Map generation");
         Container c = getContentPane();
-        c.setLayout(new BoxLayout(c, BoxLayout.PAGE_AXIS)); // установка менеджера размещения
+        c.setLayout(new BoxLayout(c, BoxLayout.PAGE_AXIS));
 
-        //-----width-----------
+        //width switcher with label
         JPanel widthPanel = new JPanel();
         widthPanel.setBorder(BorderFactory.createEmptyBorder(5,10,5,15));
         widthPanel.setLayout(new BoxLayout(widthPanel, BoxLayout.X_AXIS));
@@ -34,7 +34,7 @@ public class Main extends JFrame{
         widthPanel.add(widthSpinner);
         c.add(widthPanel);
 
-        //-------height-------------
+        //height switcher with label
         JPanel heightPanel = new JPanel();
         heightPanel.setBorder(BorderFactory.createEmptyBorder(5,10,5,15));
         heightPanel.setLayout(new BoxLayout(heightPanel, BoxLayout.X_AXIS));
@@ -54,7 +54,7 @@ public class Main extends JFrame{
         heightPanel.add(heightSpinner);
         c.add(heightPanel);
 
-        //--------block size--------------
+        //block size switcher with label
         JPanel sizePanel = new JPanel();
         sizePanel.setBorder(BorderFactory.createEmptyBorder(5,10,5,15));
         sizePanel.setLayout(new BoxLayout(sizePanel, BoxLayout.X_AXIS));
@@ -74,7 +74,7 @@ public class Main extends JFrame{
         sizePanel.add(sizeSpinner);
         c.add(sizePanel);
 
-        //----net parameters--------------
+        //net parameters
         JPanel netPanel = new JPanel();
         netPanel.setBorder(BorderFactory.createEmptyBorder(5,10,5,15));
         netPanel.setLayout(new BoxLayout(netPanel, BoxLayout.X_AXIS));
@@ -101,7 +101,7 @@ public class Main extends JFrame{
             }
         });
 
-        //----button--------------
+        //button
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.X_AXIS));
@@ -111,7 +111,7 @@ public class Main extends JFrame{
         buttonPanel.add(button);
 
         c.add(buttonPanel);
-        setSize(300,250); // задание размеров
+        setSize(300,250);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(false);
@@ -125,15 +125,14 @@ public class Main extends JFrame{
                 int height = (int)heightSpinner.getValue();
                 int blockSize = (int)sizeSpinner.getValue();
                 MazeGenerator generator = new MazeGenerator(width,height);
-                ShapefileMaker shapefileMaker = new ShapefileMaker();
                 Cell[][] maze = generator.generateMaze();
 
                 //check if net needed
                 if (netCheckBox.isSelected()){
-                    generator.addNet(maze, (int)netSpinner.getValue());
+                    generator.addNet((int)netSpinner.getValue());
                 }
                 try {
-                    shapefileMaker.makeShapefile(maze, width, height, blockSize);
+                    XmlBuilder.buildXML(maze, width, height, blockSize);
 
                 }catch (Exception e){
                     e.printStackTrace();

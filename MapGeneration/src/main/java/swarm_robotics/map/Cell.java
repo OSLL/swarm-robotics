@@ -1,4 +1,4 @@
-package com.swarmRobotics;
+package swarm_robotics.map;
 
 public class Cell {
     private Type type;
