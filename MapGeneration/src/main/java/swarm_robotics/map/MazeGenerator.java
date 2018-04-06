@@ -140,7 +140,7 @@ public class MazeGenerator {
     }
 
     /**
-     * @param cell the cell whose unvisited neighbours we are looking for
+     * @param cell - the cell whose unvisited neighbours we are looking for
      * @return list of unvisited neighbour cells
      */
     private ArrayList<Cell> getUnvisitedNeighbours( Cell cell){
