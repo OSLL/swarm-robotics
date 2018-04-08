@@ -11,26 +11,7 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-main</artifactId>
-            <version>18.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-shapefile</artifactId>
-            <version>18.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-swing</artifactId>
-            <version>18.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-epsg-hsql</artifactId>
-            <version>18.2</version>
-        </dependency>
+
     </dependencies>
 
     <repositories>
@@ -39,11 +20,7 @@
             <name>Java.net repository</name>
             <url>http://download.java.net/maven/2</url>
         </repository>
-        <repository>
-            <id>osgeo</id>
-            <name>Open Source Geospatial Foundation Repository</name>
-            <url>http://download.osgeo.org/webdav/geotools/</url>
-        </repository>
+
         <repository>
             <snapshots>
                 <enabled>true</enabled>
@@ -92,7 +69,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                com.swarmRobotics.Main
+                                swarm_robotics.map.Main
                             </mainClass>
                         </manifest>
                     </archive>
