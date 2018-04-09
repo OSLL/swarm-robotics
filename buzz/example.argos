@@ -108,15 +108,15 @@
 
       $ argos3 -q box
   -->
-  <arena size="10, 10, 1" center="0,0,0.5">
+  <arena size="1000, 1000, 1" center="0,0,0.5">
 
     <!-- Place a foot-bot in the origin and bind it to the controller -->
     
     <foot-bot id="fb_1" rab_data_size="100">
-      <body position="1,1,0" orientation="0,0,0" />
+      <body position="500,500,0" orientation="0,0,0" />
       <controller config="bcf"/>
     </foot-bot>
-
+<!--
     <foot-bot id="fb_2" rab_data_size="100">
       <body position="-1,-1,0" orientation="0,0,0" />
       <controller config="bcf"/>
@@ -146,6 +146,868 @@
       <body position="2,0,0" orientation="0,0,0" />
       <controller config="bcf"/>
     </foot-bot>
+ -->
+
+    <box id="0" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,3,0"/>
+    </box>
+    <box id="1" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,3,0"/>
+    </box>
+    <box id="2" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,3,0"/>
+    </box>
+    <box id="3" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,3,0"/>
+    </box>
+    <box id="4" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,3,0"/>
+    </box>
+    <box id="5" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,3,0"/>
+    </box>
+    <box id="6" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="3,6,0"/>
+    </box>
+    <box id="7" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,6,0"/>
+    </box>
+    <box id="8" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,6,0"/>
+    </box>
+    <box id="9" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,6,0"/>
+    </box>
+    <box id="10" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,6,0"/>
+    </box>
+    <box id="11" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,6,0"/>
+    </box>
+    <box id="12" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,6,0"/>
+    </box>
+    <box id="13" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,6,0"/>
+    </box>
+    <box id="14" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,6,0"/>
+    </box>
+    <box id="15" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,6,0"/>
+    </box>
+    <box id="16" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,6,0"/>
+    </box>
+    <box id="17" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="69,6,0"/>
+    </box>
+    <box id="18" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,6,0"/>
+    </box>
+    <box id="19" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,6,0"/>
+    </box>
+    <box id="20" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,6,0"/>
+    </box>
+    <box id="21" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,9,0"/>
+    </box>
+    <box id="22" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,9,0"/>
+    </box>
+    <box id="23" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,9,0"/>
+    </box>
+    <box id="24" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,9,0"/>
+    </box>
+    <box id="25" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,9,0"/>
+    </box>
+    <box id="26" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,9,0"/>
+    </box>
+    <box id="27" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,9,0"/>
+    </box>
+    <box id="28" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,9,0"/>
+    </box>
+    <box id="29" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,9,0"/>
+    </box>
+    <box id="30" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,12,0"/>
+    </box>
+    <box id="31" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,12,0"/>
+    </box>
+    <box id="32" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,12,0"/>
+    </box>
+    <box id="33" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,12,0"/>
+    </box>
+    <box id="34" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,12,0"/>
+    </box>
+    <box id="35" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,12,0"/>
+    </box>
+    <box id="36" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,12,0"/>
+    </box>
+    <box id="37" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,12,0"/>
+    </box>
+    <box id="38" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="51,12,0"/>
+    </box>
+    <box id="39" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,12,0"/>
+    </box>
+    <box id="40" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,12,0"/>
+    </box>
+    <box id="41" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,12,0"/>
+    </box>
+    <box id="42" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="75,12,0"/>
+    </box>
+    <box id="43" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,12,0"/>
+    </box>
+    <box id="44" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,12,0"/>
+    </box>
+    <box id="45" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,12,0"/>
+    </box>
+    <box id="46" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,15,0"/>
+    </box>
+    <box id="47" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,15,0"/>
+    </box>
+    <box id="48" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,15,0"/>
+    </box>
+    <box id="49" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,15,0"/>
+    </box>
+    <box id="50" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,15,0"/>
+    </box>
+    <box id="51" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,15,0"/>
+    </box>
+    <box id="52" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,21,0"/>
+    </box>
+    <box id="53" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,21,0"/>
+    </box>
+    <box id="54" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,21,0"/>
+    </box>
+    <box id="55" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,21,0"/>
+    </box>
+    <box id="56" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,21,0"/>
+    </box>
+    <box id="57" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,24,0"/>
+    </box>
+    <box id="58" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,24,0"/>
+    </box>
+    <box id="59" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,24,0"/>
+    </box>
+    <box id="60" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,24,0"/>
+    </box>
+    <box id="61" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,24,0"/>
+    </box>
+    <box id="62" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,24,0"/>
+    </box>
+    <box id="63" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,24,0"/>
+    </box>
+    <box id="64" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,24,0"/>
+    </box>
+    <box id="65" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,24,0"/>
+    </box>
+    <box id="66" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,24,0"/>
+    </box>
+    <box id="67" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,24,0"/>
+    </box>
+    <box id="68" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,24,0"/>
+    </box>
+    <box id="69" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="75,24,0"/>
+    </box>
+    <box id="70" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,24,0"/>
+    </box>
+    <box id="71" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="81,24,0"/>
+    </box>
+    <box id="72" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,24,0"/>
+    </box>
+    <box id="73" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,24,0"/>
+    </box>
+    <box id="74" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,27,0"/>
+    </box>
+    <box id="75" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,27,0"/>
+    </box>
+    <box id="76" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,27,0"/>
+    </box>
+    <box id="77" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,27,0"/>
+    </box>
+    <box id="78" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,27,0"/>
+    </box>
+    <box id="79" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,27,0"/>
+    </box>
+    <box id="80" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,27,0"/>
+    </box>
+    <box id="81" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="3,30,0"/>
+    </box>
+    <box id="82" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,30,0"/>
+    </box>
+    <box id="83" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,30,0"/>
+    </box>
+    <box id="84" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,30,0"/>
+    </box>
+    <box id="85" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,30,0"/>
+    </box>
+    <box id="86" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,30,0"/>
+    </box>
+    <box id="87" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,30,0"/>
+    </box>
+    <box id="88" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="39,30,0"/>
+    </box>
+    <box id="89" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,30,0"/>
+    </box>
+    <box id="90" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,30,0"/>
+    </box>
+    <box id="91" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,30,0"/>
+    </box>
+    <box id="92" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,30,0"/>
+    </box>
+    <box id="93" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,30,0"/>
+    </box>
+    <box id="94" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="69,30,0"/>
+    </box>
+    <box id="95" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,30,0"/>
+    </box>
+    <box id="96" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,30,0"/>
+    </box>
+    <box id="97" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,30,0"/>
+    </box>
+    <box id="98" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,33,0"/>
+    </box>
+    <box id="99" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,33,0"/>
+    </box>
+    <box id="100" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,33,0"/>
+    </box>
+    <box id="101" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,33,0"/>
+    </box>
+    <box id="102" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,33,0"/>
+    </box>
+    <box id="103" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,33,0"/>
+    </box>
+    <box id="104" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,33,0"/>
+    </box>
+    <box id="105" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,33,0"/>
+    </box>
+    <box id="106" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,39,0"/>
+    </box>
+    <box id="107" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,39,0"/>
+    </box>
+    <box id="108" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,39,0"/>
+    </box>
+    <box id="109" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,39,0"/>
+    </box>
+    <box id="110" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,42,0"/>
+    </box>
+    <box id="111" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,42,0"/>
+    </box>
+    <box id="112" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,42,0"/>
+    </box>
+    <box id="113" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,42,0"/>
+    </box>
+    <box id="114" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,42,0"/>
+    </box>
+    <box id="115" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,42,0"/>
+    </box>
+    <box id="116" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="39,42,0"/>
+    </box>
+    <box id="117" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,42,0"/>
+    </box>
+    <box id="118" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,42,0"/>
+    </box>
+    <box id="119" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,42,0"/>
+    </box>
+    <box id="120" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,42,0"/>
+    </box>
+    <box id="121" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,42,0"/>
+    </box>
+    <box id="122" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,42,0"/>
+    </box>
+    <box id="123" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,42,0"/>
+    </box>
+    <box id="124" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,42,0"/>
+    </box>
+    <box id="125" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,42,0"/>
+    </box>
+    <box id="126" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,45,0"/>
+    </box>
+    <box id="127" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,45,0"/>
+    </box>
+    <box id="128" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,45,0"/>
+    </box>
+    <box id="129" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,45,0"/>
+    </box>
+    <box id="130" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,45,0"/>
+    </box>
+    <box id="131" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,45,0"/>
+    </box>
+    <box id="132" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,45,0"/>
+    </box>
+    <box id="133" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,45,0"/>
+    </box>
+    <box id="134" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,48,0"/>
+    </box>
+    <box id="135" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,48,0"/>
+    </box>
+    <box id="136" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,48,0"/>
+    </box>
+    <box id="137" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,48,0"/>
+    </box>
+    <box id="138" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,48,0"/>
+    </box>
+    <box id="139" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,48,0"/>
+    </box>
+    <box id="140" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,48,0"/>
+    </box>
+    <box id="141" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="51,48,0"/>
+    </box>
+    <box id="142" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,48,0"/>
+    </box>
+    <box id="143" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,48,0"/>
+    </box>
+    <box id="144" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,48,0"/>
+    </box>
+    <box id="145" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,48,0"/>
+    </box>
+    <box id="146" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="75,48,0"/>
+    </box>
+    <box id="147" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,48,0"/>
+    </box>
+    <box id="148" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,48,0"/>
+    </box>
+    <box id="149" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,48,0"/>
+    </box>
+    <box id="150" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,51,0"/>
+    </box>
+    <box id="151" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,51,0"/>
+    </box>
+    <box id="152" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,51,0"/>
+    </box>
+    <box id="153" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,51,0"/>
+    </box>
+    <box id="154" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,51,0"/>
+    </box>
+    <box id="155" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,51,0"/>
+    </box>
+    <box id="156" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,51,0"/>
+    </box>
+    <box id="157" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,57,0"/>
+    </box>
+    <box id="158" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,57,0"/>
+    </box>
+    <box id="159" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,57,0"/>
+    </box>
+    <box id="160" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,57,0"/>
+    </box>
+    <box id="161" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,57,0"/>
+    </box>
+    <box id="162" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,57,0"/>
+    </box>
+    <box id="163" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,57,0"/>
+    </box>
+    <box id="164" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,60,0"/>
+    </box>
+    <box id="165" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,60,0"/>
+    </box>
+    <box id="166" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,60,0"/>
+    </box>
+    <box id="167" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,60,0"/>
+    </box>
+    <box id="168" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,60,0"/>
+    </box>
+    <box id="169" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,60,0"/>
+    </box>
+    <box id="170" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="39,60,0"/>
+    </box>
+    <box id="171" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,60,0"/>
+    </box>
+    <box id="172" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,60,0"/>
+    </box>
+    <box id="173" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,60,0"/>
+    </box>
+    <box id="174" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,60,0"/>
+    </box>
+    <box id="175" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,60,0"/>
+    </box>
+    <box id="176" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,60,0"/>
+    </box>
+    <box id="177" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,60,0"/>
+    </box>
+    <box id="178" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,60,0"/>
+    </box>
+    <box id="179" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,60,0"/>
+    </box>
+    <box id="180" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,60,0"/>
+    </box>
+    <box id="181" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,63,0"/>
+    </box>
+    <box id="182" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,63,0"/>
+    </box>
+    <box id="183" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,63,0"/>
+    </box>
+    <box id="184" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,63,0"/>
+    </box>
+    <box id="185" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,63,0"/>
+    </box>
+    <box id="186" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,63,0"/>
+    </box>
+    <box id="187" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,63,0"/>
+    </box>
+    <box id="188" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,66,0"/>
+    </box>
+    <box id="189" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,66,0"/>
+    </box>
+    <box id="190" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,66,0"/>
+    </box>
+    <box id="191" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,66,0"/>
+    </box>
+    <box id="192" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,66,0"/>
+    </box>
+    <box id="193" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,66,0"/>
+    </box>
+    <box id="194" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,66,0"/>
+    </box>
+    <box id="195" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,66,0"/>
+    </box>
+    <box id="196" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,66,0"/>
+    </box>
+    <box id="197" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,66,0"/>
+    </box>
+    <box id="198" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,66,0"/>
+    </box>
+    <box id="199" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="69,66,0"/>
+    </box>
+    <box id="200" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,66,0"/>
+    </box>
+    <box id="201" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="81,66,0"/>
+    </box>
+    <box id="202" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,66,0"/>
+    </box>
+    <box id="203" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,66,0"/>
+    </box>
+    <box id="204" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,69,0"/>
+    </box>
+    <box id="205" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,69,0"/>
+    </box>
+    <box id="206" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,69,0"/>
+    </box>
+    <box id="207" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,69,0"/>
+    </box>
+    <box id="208" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,69,0"/>
+    </box>
+    <box id="209" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,69,0"/>
+    </box>
+    <box id="210" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,75,0"/>
+    </box>
+    <box id="211" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,75,0"/>
+    </box>
+    <box id="212" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,75,0"/>
+    </box>
+    <box id="213" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,75,0"/>
+    </box>
+    <box id="214" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,75,0"/>
+    </box>
+    <box id="215" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,75,0"/>
+    </box>
+    <box id="216" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,75,0"/>
+    </box>
+    <box id="217" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,78,0"/>
+    </box>
+    <box id="218" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,78,0"/>
+    </box>
+    <box id="219" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,78,0"/>
+    </box>
+    <box id="220" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,78,0"/>
+    </box>
+    <box id="221" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,78,0"/>
+    </box>
+    <box id="222" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,78,0"/>
+    </box>
+    <box id="223" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,78,0"/>
+    </box>
+    <box id="224" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,78,0"/>
+    </box>
+    <box id="225" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="51,78,0"/>
+    </box>
+    <box id="226" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,78,0"/>
+    </box>
+    <box id="227" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,78,0"/>
+    </box>
+    <box id="228" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,78,0"/>
+    </box>
+    <box id="229" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,78,0"/>
+    </box>
+    <box id="230" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,78,0"/>
+    </box>
+    <box id="231" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,78,0"/>
+    </box>
+    <box id="232" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,81,0"/>
+    </box>
+    <box id="233" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,81,0"/>
+    </box>
+    <box id="234" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,81,0"/>
+    </box>
+    <box id="235" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,81,0"/>
+    </box>
+    <box id="236" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="3,84,0"/>
+    </box>
+    <box id="237" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,84,0"/>
+    </box>
+    <box id="238" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,84,0"/>
+    </box>
+    <box id="239" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,84,0"/>
+    </box>
+    <box id="240" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="15,84,0"/>
+    </box>
+    <box id="241" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,84,0"/>
+    </box>
+    <box id="242" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,84,0"/>
+    </box>
+    <box id="243" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,84,0"/>
+    </box>
+    <box id="244" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,84,0"/>
+    </box>
+    <box id="245" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,84,0"/>
+    </box>
+    <box id="246" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="39,84,0"/>
+    </box>
+    <box id="247" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,84,0"/>
+    </box>
+    <box id="248" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,84,0"/>
+    </box>
+    <box id="249" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,84,0"/>
+    </box>
+    <box id="250" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="51,84,0"/>
+    </box>
+    <box id="251" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,84,0"/>
+    </box>
+    <box id="252" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,84,0"/>
+    </box>
+    <box id="253" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,84,0"/>
+    </box>
+    <box id="254" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,84,0"/>
+    </box>
+    <box id="255" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="69,84,0"/>
+    </box>
+    <box id="256" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="75,84,0"/>
+    </box>
+    <box id="257" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,84,0"/>
+    </box>
+    <box id="258" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="81,84,0"/>
+    </box>
+    <box id="259" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,84,0"/>
+    </box>
+    <box id="260" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,84,0"/>
+    </box>
+    <box id="261" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="3,87,0"/>
+    </box>
+    <box id="262" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="6,87,0"/>
+    </box>
+    <box id="263" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="9,87,0"/>
+    </box>
+    <box id="264" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="12,87,0"/>
+    </box>
+    <box id="265" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="15,87,0"/>
+    </box>
+    <box id="266" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="21,87,0"/>
+    </box>
+    <box id="267" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="24,87,0"/>
+    </box>
+    <box id="268" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="27,87,0"/>
+    </box>
+    <box id="269" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="30,87,0"/>
+    </box>
+    <box id="270" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="33,87,0"/>
+    </box>
+    <box id="271" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="39,87,0"/>
+    </box>
+    <box id="272" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="42,87,0"/>
+    </box>
+    <box id="273" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="45,87,0"/>
+    </box>
+    <box id="274" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="48,87,0"/>
+    </box>
+    <box id="275" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="51,87,0"/>
+    </box>
+    <box id="276" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="57,87,0"/>
+    </box>
+    <box id="277" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="60,87,0"/>
+    </box>
+    <box id="278" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="63,87,0"/>
+    </box>
+    <box id="279" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="66,87,0"/>
+    </box>
+    <box id="280" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="69,87,0"/>
+    </box>
+    <box id="281" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="75,87,0"/>
+    </box>
+    <box id="282" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="78,87,0"/>
+    </box>
+    <box id="283" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="81,87,0"/>
+    </box>
+    <box id="284" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="84,87,0"/>
+    </box>
+    <box id="285" movable="false" size="3,3,3">
+        <body orientation="0,0,0" position="87,87,0"/>
+    </box>
+
+
 
   </arena>
 
